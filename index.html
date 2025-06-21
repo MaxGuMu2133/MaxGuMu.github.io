@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MaxGuMu | Personal Site</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-pink-200 font-sans min-h-screen">
+<body class="bg-black text-pink-100 font-sans min-h-screen">
 
   <!-- Navbar -->
   <nav class="bg-pink-500 p-4 flex justify-between items-center shadow-md">
@@ -19,30 +19,42 @@
     </ul>
   </nav>
 
-  <!-- Content -->
-  <div id="content" class="p-6 max-w-3xl mx-auto text-pink-100">
-    <!-- Content will be dynamically inserted here -->
-  </div>
+  <!-- Content Section -->
+  <main id="content" class="p-6 max-w-4xl mx-auto">
+    <!-- เนื้อหาจะถูกเปลี่ยนผ่าน JavaScript -->
+  </main>
 
   <script>
     const pages = {
       home: `
-        <h1 class="text-4xl font-bold mb-4 text-pink-400">Welcome to MaxGuMu</h1>
-        <p>This is the <strong>Home</strong> page of my personal site. Enjoy exploring!</p>
+        <h1 class="text-4xl font-bold mb-4 text-pink-400">ยินดีต้อนรับสู่ MaxGuMu</h1>
+        <p class="text-pink-200">ที่นี่คือเว็บไซต์ส่วนตัวของฉัน สำหรับแบ่งปันเรื่องราวเกี่ยวกับคอมพิวเตอร์ ไอที และแรงบันดาลใจต่างๆ</p>
       `,
       blog: `
-        <h1> <button Quiclick="location.herf='https://github.com/MaxGuMu2133/MaxGuMu.github.io/blob/main/Blog.html'" class="text-4xl font-bold mb-4 text-pink-400">Blog</button> </h1>
+        <h1 class="text-4xl font-bold mb-6 text-pink-400">Blog</h1>
+        <article class="bg-pink-900 bg-opacity-10 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h2 class="text-2xl font-bold text-pink-300 mb-4">🐧 แนะนำสำหรับคนที่อยากใช้ Linux</h2>
+          <p class="text-pink-200 leading-relaxed">
+            หากคุณเบื่อ Windows หรือรู้สึกว่าเครื่องเริ่มช้า Linux อาจเป็นทางเลือกใหม่ที่น่าสนใจ โดยเฉพาะ Linux Mint หรือ Ubuntu ที่ใช้งานง่าย เหมาะกับผู้เริ่มต้น
+            <br><br>
+            Linux ฟรี ปลอดภัย ไม่มีไวรัส เหมาะสำหรับการฟื้นฟูเครื่องเก่า หรือใช้ในงานเขียนโค้ด โปรแกรมเมอร์ และคนรักอิสระในการปรับแต่งระบบ
+            <br><br>
+            MaxGuMu สนับสนุนการใช้ Linux กับคอมมือสองเพื่อความคุ้มค่า ลองดู แล้วคุณอาจหลงรัก Linux เหมือนเรา!
+          </p>
+        </article>
       `,
       about: `
         <h1 class="text-4xl font-bold mb-4 text-pink-400">About Me</h1>
-        <p>Hello! I'm Max, the creator of MaxGuMu — a space for tech, games, and creativity.</p>
+        <p class="text-pink-200">สวัสดีครับ! ผมชื่อ Max ผู้ก่อตั้งเว็บไซต์ MaxGuMu เป็นคนที่รักการแต่งคอม ทำคอมมือสอง และช่วยให้คนได้ใช้งานเทคโนโลยีอย่างคุ้มค่า</p>
+        <p class="text-pink-200 mt-2">ผมเชื่อว่าใครๆ ก็สามารถเริ่มต้นกับไอทีได้ โดยไม่ต้องมีงบเยอะ ขอแค่เข้าใจและรู้จักเลือกอุปกรณ์ให้เหมาะสม</p>
       `,
       product: `
-        <h1 class="text-4xl font-bold mb-4 text-pink-400">My Products</h1>
-        <ul class="list-disc ml-6">
-          <li>Custom-built PCs</li>
-          <li>Used GPU deals</li>
-          <li>PC parts and accessories</li>
+        <h1 class="text-4xl font-bold mb-4 text-pink-400">สินค้าของเรา</h1>
+        <ul class="list-disc ml-6 text-pink-200 space-y-2">
+          <li>คอมพิวเตอร์มือสองประกอบเอง ราคาประหยัด</li>
+          <li>การ์ดจอใช้งานได้จริง (ตรวจเช็คแล้ว)</li>
+          <li>อะไหล่และอุปกรณ์เสริมคอมพิวเตอร์</li>
+          <li>บริการให้คำแนะนำก่อนเลือกซื้อ</li>
         </ul>
       `
     };
@@ -51,7 +63,7 @@
       document.getElementById('content').innerHTML = pages[page];
     }
 
-    // Load default page
+    // โหลดหน้าแรกเป็น Home โดยอัตโนมัติ
     navigate('home');
   </script>
 
