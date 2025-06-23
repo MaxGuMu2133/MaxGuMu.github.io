@@ -102,41 +102,30 @@
   </article>
 <h1 class="text-4xl font-bold mb-6 text-pink-400">Blog</h1>
 
-<!-- ปุ่มกดแสดง/ซ่อนบทความ -->
-<div class="grid gap-4 mb-6">
-  <button onclick="toggleSpecs()" class="block bg-pink-600 hover:bg-pink-700 text-white px-5 py-3 rounded-lg shadow text-center transition w-full">
+<!-- ใช้ <details> ซ่อน–แสดงบทความ -->
+<details class="bg-pink-900 bg-opacity-10 p-6 rounded-lg shadow hover:shadow-lg transition mb-6">
+  <summary class="cursor-pointer text-white bg-pink-600 hover:bg-pink-700 px-5 py-3 rounded-lg text-lg font-semibold">
     🖥️ สเปกคอมแนะนำสำหรับคนงบน้อย
-  </button>
-</div>
+  </summary>
 
-<!-- บทความสเปกคอม (เริ่มต้นถูกซ่อนไว้) -->
-<article id="budget-specs" class="hidden bg-pink-900 bg-opacity-10 p-6 rounded-lg shadow hover:shadow-lg transition mb-6">
-  <h2 class="text-2xl font-bold text-pink-300 mb-4">🖥️ สเปกคอมแนะนำสำหรับคนงบน้อย</h2>
+  <div class="mt-4 text-pink-200">
+    <ul class="list-disc pl-6 space-y-1 mt-2">
+      <li>✅ <strong>CPU:</strong> AMD Ryzen 3 3200G (หรือรุ่นแรงกว่านี้ เช่น Ryzen 5 5600G)</li>
+      <li>✅ <strong>iGPU:</strong> Radeon Vega 8 Graphics (แชร์แรมได้สูงสุด 2GB)</li>
+      <li>✅ <strong>Mainboard:</strong> A520M (รองรับ Ryzen 3000 ขึ้นไป)</li>
+      <li>✅ <strong>RAM:</strong> 32GB DDR4 3200MHz (แนะนำแบรนด์ Kingston หรือ Corsair)</li>
+      <li>✅ <strong>SSD:</strong> 512GB (หรือมากกว่านี้ถ้างบถึง)</li>
+      <li>✅ <strong>PSU:</strong> 550W 80 Plus (แบรนด์คุณภาพ เช่น Antec, Cooler Master, Corsair)</li>
+      <li>✅ <strong>Case:</strong> mATX หรือ ATX แล้วแต่ความชอบ</li>
+      <li>✅ <strong>OS:</strong> Windows หรือ Linux (Linux Mint, Nobara, หรือ Zorin แนะนำสำหรับ iGPU)</li>
+    </ul>
 
-  <ul class="text-pink-200 list-disc pl-6 space-y-1">
-    <li>✅ <strong>CPU:</strong> AMD Ryzen 3 3200G (หรือรุ่นแรงกว่านี้ เช่น Ryzen 5 5600G)</li>
-    <li>✅ <strong>iGPU:</strong> Radeon Vega 8 Graphics (แชร์แรมได้สูงสุด 2GB)</li>
-    <li>✅ <strong>Mainboard:</strong> A520M (รองรับ Ryzen 3000 ขึ้นไป)</li>
-    <li>✅ <strong>RAM:</strong> 32GB DDR4 3200MHz (แนะนำแบรนด์ Kingston หรือ Corsair)</li>
-    <li>✅ <strong>SSD:</strong> 512GB (หรือมากกว่านี้ถ้างบถึง)</li>
-    <li>✅ <strong>PSU:</strong> 550W 80 Plus (แบรนด์คุณภาพ เช่น Antec, Cooler Master, Corsair)</li>
-    <li>✅ <strong>Case:</strong> mATX หรือ ATX แล้วแต่ความชอบ</li>
-    <li>✅ <strong>OS:</strong> Windows หรือ Linux (Linux Mint, Nobara, หรือ Zorin แนะนำสำหรับ iGPU)</li>
-  </ul>
-
-  <p class="text-pink-300 mt-4">
-    💡 <strong>เหมาะกับ:</strong> ผู้เริ่มต้นทำงานคลิป, เล่นเกมทั่วไป (Minecraft, Roblox, Genshin 720p), ทำ MMD, หรือใช้เป็นคอมพ์ตัดต่อเบา ๆ  
-    ถ้าใช้งานหนักขึ้นในอนาคต อัปเกรด GPU หรือ SSD เพิ่มได้ทันที
-  </p>
-</article>
-
-<!-- JavaScript สำหรับ toggle -->
-<script>
-  function toggleSpecs() {
-    const section = document.getElementById('budget-specs');
-    section.classList.toggle('hidden');
-  }
-</script>
+    <p class="mt-4 text-pink-300">
+      💡 <strong>เหมาะกับ:</strong> ผู้เริ่มต้นทำงานคลิป, เล่นเกมทั่วไป (Minecraft, Roblox, Genshin 720p), ทำ MMD, หรือใช้เป็นคอมพ์ตัดต่อเบา ๆ  
+      ถ้าใช้งานหนักขึ้นในอนาคต อัปเกรด GPU หรือ SSD เพิ่มได้ทันที
+    </p>
+  </div>
+</details>
 `,
       about: `
   <h1 class="text-4xl font-bold mb-6 text-pink-400">เกี่ยวกับ MaxGuMu</h1>
