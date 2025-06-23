@@ -102,15 +102,15 @@
   </article>
 <h1 class="text-4xl font-bold mb-6 text-pink-400">Blog</h1>
 
-<!-- ปุ่มชื่อบทความ -->
+<!-- ปุ่มกดแสดง/ซ่อนบทความ -->
 <div class="grid gap-4 mb-6">
-  <a href="#budget-specs" class="block bg-pink-600 hover:bg-pink-700 text-white px-5 py-3 rounded-lg shadow text-center transition">
+  <button onclick="toggleSpecs()" class="block bg-pink-600 hover:bg-pink-700 text-white px-5 py-3 rounded-lg shadow text-center transition w-full">
     🖥️ สเปกคอมแนะนำสำหรับคนงบน้อย
-  </a>
+  </button>
 </div>
 
-<!-- บทความสเปกคอมงบน้อย -->
-<article id="budget-specs" class="bg-pink-900 bg-opacity-10 p-6 rounded-lg shadow hover:shadow-lg transition mb-6">
+<!-- บทความสเปกคอม (เริ่มต้นถูกซ่อนไว้) -->
+<article id="budget-specs" class="hidden bg-pink-900 bg-opacity-10 p-6 rounded-lg shadow hover:shadow-lg transition mb-6">
   <h2 class="text-2xl font-bold text-pink-300 mb-4">🖥️ สเปกคอมแนะนำสำหรับคนงบน้อย</h2>
 
   <ul class="text-pink-200 list-disc pl-6 space-y-1">
@@ -129,6 +129,14 @@
     ถ้าใช้งานหนักขึ้นในอนาคต อัปเกรด GPU หรือ SSD เพิ่มได้ทันที
   </p>
 </article>
+
+<!-- JavaScript สำหรับ toggle -->
+<script>
+  function toggleSpecs() {
+    const section = document.getElementById('budget-specs');
+    section.classList.toggle('hidden');
+  }
+</script>
 `,
       about: `
   <h1 class="text-4xl font-bold mb-6 text-pink-400">เกี่ยวกับ MaxGuMu</h1>
